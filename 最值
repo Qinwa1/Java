@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class Main {
+    public Main() {
+    }
+
+    public static void Maxmin(int[] s) {
+        int max = s[0];
+        int min = s[0];
+
+        for(int i = 0; i < 10; ++i) {
+            if (max < s[i]) {
+                max = s[i];
+            }
+
+            if (min > s[i]) {
+                min = s[i];
+            }
+        }
+
+        System.out.println("打印两个 最值:" + max + " " + min);
+        System.out.println("" + max + "+" + min + "=" + (max + min));
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int[] s = new int[10];
+
+        for(int i = 0; i < 10; ++i) {
+            s[i] = scanner.nextInt();
+        }
+
+        Maxmin(s);
+    }
+}
